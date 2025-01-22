@@ -1,5 +1,8 @@
-//gonna fill this in later
+//Author: Miles Glover
+//Purpose of File: idk
 
 public class Register {
+
+
 
 }
