@@ -135,4 +135,13 @@ public class Purse {
         return returnString;
 
     }
+
+
+    //custom getter function I made so that I can pass cash up directly so I don't have any string counting shenanigans
+    public Map<Denomination, Integer> getContents(){
+
+        return cash;
+
+    }
+
 }
