@@ -1,5 +1,5 @@
 //Author: Miles Glover
-//Purpose of File: Panel that handles the GUI
+//Purpose of File:
 
 package SmallestDenomination;
 
