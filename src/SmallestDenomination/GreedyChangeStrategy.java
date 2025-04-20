@@ -1,11 +1,13 @@
 //Author: Miles Glover
-//Purpose of File:
+//Purpose of File: implements the ChangeStrategy using the greedy algorithm, it always uses the largest possible denomination first
 
 package SmallestDenomination;
 
-//this class implements the ChangeStrategy using the greedy algorithm
-//it always uses the largest possible denomination first
 public class GreedyChangeStrategy implements ChangeStrategy {
+
+    //rounding thresholds
+    private double pennyThreshold = 0.01;
+    private double halfPennyThreshold = 0.00499;
 
     @Override
     public Purse makeChange(double amt) {
@@ -13,6 +15,7 @@ public class GreedyChangeStrategy implements ChangeStrategy {
 
         //start from the highest denomination
         for (int i = Denomination.DEFAULT_DENOMS.size() - 1; i >= 0; i--) {
+
             Denomination d = Denomination.DEFAULT_DENOMS.get(i);
             double denomValue = d.amt();
 
@@ -23,15 +26,20 @@ public class GreedyChangeStrategy implements ChangeStrategy {
             }
 
             //correct for rounding issues
-            if (amt <= 0.00499) break;
-            if (amt <= 0.01) {
+            if (amt <= halfPennyThreshold) break;
+            if (amt <= pennyThreshold) {
+
                 myPurse.add(Denomination.DEFAULT_DENOMS.getFirst(), 1);
                 break;
+
             }
+
         }
 
         return myPurse;
+
     }
+
 }
 
 

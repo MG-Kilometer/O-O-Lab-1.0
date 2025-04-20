@@ -11,6 +11,8 @@ import java.util.Map;
 
 public class Purse {
 
+    private final double pluralityThreshold = 1.01;
+
     //cash represents a denomination and int mapped together so quantities of denominations can be tracked
     private Map<Denomination, Integer> cash;
 
@@ -111,7 +113,7 @@ public class Purse {
             returnString=returnString+entry.getKey().name();
 
             //if quantity of denom is multiple, then put an s at end of denom name to represent plurality
-            if(entry.getValue()>1.01){
+            if(entry.getValue()>pluralityThreshold){
 
                 returnString=returnString+"s";
 
