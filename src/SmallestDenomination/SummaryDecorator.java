@@ -1,9 +1,8 @@
 //Author: Miles Glover
-//Purpose of File:
+//Purpose of File: concrete decorator that appends a strategy summary message to the output
 
 package SmallestDenomination;
 
-//concrete decorator that appends a strategy summary message to the output
 public class SummaryDecorator extends CurrencyDecorator {
 
     public SummaryDecorator(Purse basePurse) {

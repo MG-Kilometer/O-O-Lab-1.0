@@ -1,10 +1,9 @@
 //Author: Miles Glover
-//Purpose of File:
+//Purpose of File:abstract base class for Decorator Pattern, extends Purse so it can be treated like a Purse
 
 package SmallestDenomination;
 
-//abstract base class for Decorator Pattern
-//extends Purse so it can be treated like a Purse
+
 public abstract class CurrencyDecorator extends Purse {
     protected Purse basePurse;
 

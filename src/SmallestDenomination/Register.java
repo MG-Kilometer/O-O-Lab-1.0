@@ -1,11 +1,10 @@
 //Author: Miles Glover
-//Purpose of File:
+//Purpose of File:represents a cash register that makes change using a strategy
 
 package SmallestDenomination;
 
 import java.util.Scanner;
 
-//represents a cash register that makes change using a strategy
 public class Register {
 
     private ChangeStrategy strategy;

@@ -1,5 +1,5 @@
 //Author: Miles Glover
-//Purpose of File:
+//Purpose of File: Provides a UI for entering an amount and displaying change using coin/bill images.
 
 package SmallestDenomination;
 
