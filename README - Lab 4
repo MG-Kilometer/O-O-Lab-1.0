@@ -1,0 +1,29 @@
+README
+Design Patterns Used and Their Purpose
+This project incorporates design patterns to improve scalability, maintainability, and readability. Below are the patterns used:
+
+Model-View-Controller (MVC) [this one was inherent to projects 1's origional design and thus can be safely ignored]:
+
+    Model: Purse, Register, and Denomination represent the application's logic and state.
+
+    View: PursePanel and RegisterPanel handle all UI components and rendering.
+
+    Controller: The InputListener class processes user input and updates the model and view accordingly.
+
+    Purpose: Cleanly separates UI from business logic, allowing future updates to either side without tight coupling.
+
+Strategy Pattern (planned/optional):
+
+    Context: Could be used for different change-making algorithms (e.g., greedy, optimized).
+
+    Implementation: Register could be extended to accept different strategies for calculating change.
+
+    Purpose: Makes the application extensible for multiple calculation strategies without altering existing logic.
+
+Factory Pattern (implied through Denomination):
+
+    Context: Denomination instances provide consistent image paths and properties.
+
+    Purpose: Centralizes the creation of consistent currency objects to ensure accurate display and value computation.
+
+    These patterns help separate responsibilities, make the system easier to debug, and allow for flexible growth or testing of alternative behaviors like change strategies.
